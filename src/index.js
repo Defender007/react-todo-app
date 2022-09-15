@@ -21,7 +21,7 @@ function reducer(state = initialState, action) {
       return {
         count: state.count - 1
       };
-    case "RESET":
+    case "RESET_COUNTER":
       return {
         count: 0
       };

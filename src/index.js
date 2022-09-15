@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDom from "react-dom";
 import Counter from "./Counter";
-import { createStore, applyMiddleware } from "redux";
+import { createStore } from "redux";
 import { Provider } from "react-redux";
-import rootReducer  from "./rootReducer";
-import thunk from "redux-thunk";
 import "./index.css";
 import "./Counter.css"
 
@@ -33,7 +31,7 @@ function reducer(state = initialState, action) {
   
 }
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer);
 
 const App = () => {
   return (
